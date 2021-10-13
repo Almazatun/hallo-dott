@@ -1,0 +1,28 @@
+{
+  "name": "tt-rectangular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node dist/main.js",
+    "build": "tsc -p tsconfig.json",
+    "dev": "nodemon src/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Almazatun/tt-rectnagular.git"
+  },
+  "author": "Almaz P",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Almazatun/tt-rectnagular/issues"
+  },
+  "homepage": "https://github.com/Almazatun/tt-rectnagular#readme",
+  "dependencies": {
+    "@types/node": "^16.10.5",
+    "@types/nodemon": "^1.19.1",
+    "nodemon": "^2.0.13",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.4"
+  }
+}
