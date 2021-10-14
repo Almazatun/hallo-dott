@@ -28,7 +28,7 @@ module.exports = {
     "@typescript-eslint/no-shadow": ["error"],
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
     "arrow-body-style": ["error", "as-needed"],
-    "implicit-arrow-linebreak": ["error", "below"],
+    "implicit-arrow-linebreak": ["error", "beside"],
     "no-param-reassign": ["error", { "props": false }],
     "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
     "object-curly-newline": ["error", { "consistent": true }],
