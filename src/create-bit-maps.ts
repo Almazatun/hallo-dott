@@ -3,13 +3,13 @@ import { Pixel } from './model/pixel';
 import { PixelBuilder } from './bulder/pixel.builder';
 import { BitMapBuilder } from './bulder/bit-map.builder';
 
-export interface createBitMapInput {
+export interface CreateBitMapInput {
   lineSize: number
   columnSize: number
   pixels: string
 }
 
-export function createBitmaps(createBitMapsInput: createBitMapInput[]): BitMap[] {
+export function createBitmaps(createBitMapsInput: CreateBitMapInput[]): BitMap[] {
   const bitmaps: BitMap[] = [];
 
   createBitMapsInput.forEach((createBitMapInput) => {
