@@ -1,5 +1,7 @@
 import { BitMap } from './model/bit-map';
 import { Pixel } from './model/pixel';
+import { PixelBuilder } from './bulder/pixel.builder';
+import { BitMapBuilder } from './bulder/bit-map.builder';
 
 export interface createBitMapInput {
   lineSize: number
@@ -18,11 +20,21 @@ export function createBitmaps(createBitMapsInput: createBitMapInput[]): BitMap[]
 
     for (let line = 0; line < lineSize; line += 1) {
       for (let column = 0; column < columnSize; column += 1) {
-        const pixel = new Pixel(line, column, Number(lines[line].charAt(column)));
+        const pixel = new PixelBuilder()
+          .setLine(line)
+          .setColumn(column)
+          .setColor(Number(lines[line].charAt(column)))
+          .build();
+
         pixels.push(pixel);
       }
     }
-    const bitmap = new BitMap(lineSize, columnSize, pixels);
+    const bitmap = new BitMapBuilder()
+      .setLineSize(lineSize)
+      .setColumnSize(columnSize)
+      .setPixels(pixels)
+      .build();
+
     bitmaps.push(bitmap);
   });
 
