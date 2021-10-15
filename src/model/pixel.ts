@@ -1,14 +1,15 @@
 import { CONST_PIXEL_COLOR } from '../types';
+import { PixelBuilder } from '../bulder/pixel.builder';
 
 export class Pixel {
   private i: number // line
   private j: number // column
   private color: CONST_PIXEL_COLOR;
 
-  constructor(i: number, j: number, color: CONST_PIXEL_COLOR) {
-    this.i = i;
-    this.j = j;
-    this.color = color;
+  constructor(pixelBuilder: PixelBuilder) {
+    this.i = pixelBuilder.Line;
+    this.j = pixelBuilder.Column;
+    this.color = pixelBuilder.Color;
   }
 
   public getLineIndex(): number {

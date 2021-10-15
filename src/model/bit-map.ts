@@ -1,15 +1,16 @@
 import { Pixel } from './pixel';
 import { CONST_PIXEL_COLOR } from '../types';
+import { BitMapBuilder } from '../bulder/bit-map.builder';
 
 export class BitMap {
   private lineSize: number;
   private columnSize: number;
   private pixels: Pixel[];
 
-  constructor(lineSize: number, columnSize: number, pixels: Pixel[]) {
-    this.lineSize = lineSize;
-    this.columnSize = columnSize;
-    this.pixels = pixels;
+  constructor(bitMapBuilder: BitMapBuilder) {
+    this.lineSize = bitMapBuilder.LineSize;
+    this.columnSize = bitMapBuilder.ColumnSize;
+    this.pixels = bitMapBuilder.Pixels;
   }
 
   public getColumnSize(): number {
