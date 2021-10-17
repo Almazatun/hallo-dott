@@ -4,6 +4,7 @@ import readline from 'readline';
 import { BitMapUseCase, CreateBitMapInput } from './domain/bit-map.use-case';
 import { BitMapBuilder } from './builder/bit-map.builder';
 import { PixelBuilder } from './builder/pixel.builder';
+import { calculateDistanceFromEachPixelToNearestWhite } from './calculate-distance';
 
 export function processLineByLine() {
   const inputFileName: string = 'input.txt';
@@ -17,7 +18,7 @@ export function processLineByLine() {
   });
 
   rl.on('line', (line) => {
-    console.log(`Line from file: ${line.trim()}`);
+    // console.log(`Line from file: ${line.trim()}`);
     if (line.includes(' ')) {
       const [lineSize, columnSize] = line.split(' ');
 
@@ -32,8 +33,6 @@ export function processLineByLine() {
     if (!line.includes(' ')) {
       const lastBitMapListElement = bitMapList[bitMapList.length - 1];
       if (lastBitMapListElement !== undefined) {
-        console.log('==>LINE', line);
-        console.log('==>lastBitMapListElement', lastBitMapListElement);
         const isValidColumnSizeCurrentLine: boolean = [...line.trim()].length === lastBitMapListElement.columnSize;
 
         if (isValidColumnSizeCurrentLine) {
@@ -53,6 +52,19 @@ export function processLineByLine() {
     const bitMapUseCase = new BitMapUseCase(bitMapBuilder, pixelBuilder);
 
     const bitMapListWithOptions = bitMapUseCase.createList(bitMapList);
-    console.log(bitMapListWithOptions);
+
+    for (const bitMap of bitMapListWithOptions) {
+      const currentBitMapPixels = bitMap.getPixels();
+      const currentBitMapLineSize = bitMap.getLineSize();
+
+      for (let line = 0; line < currentBitMapLineSize; line += 1) {
+        const result = currentBitMapPixels.filter(pixel => pixel.getLineIndex() === line)
+          .map(pixel => calculateDistanceFromEachPixelToNearestWhite(currentBitMapPixels, pixel))
+          .join(' ');
+
+        console.log(`${result}\n`);
+      }
+      console.log('\n');
+    }
   });
 }
