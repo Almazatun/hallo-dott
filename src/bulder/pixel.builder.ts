@@ -12,20 +12,20 @@ export class PixelBuilder {
     this.color = 0;
   }
 
-  get Line(): number {
+  public get Line(): number {
     return this.line;
   }
 
-  setLine(line: number): PixelBuilder {
+  public setLine(line: number): PixelBuilder {
     this.line = line;
     return this;
   }
 
-  get Column(): number {
+  public get Column(): number {
     return this.column;
   }
 
-  setColumn(column: number): PixelBuilder {
+  public setColumn(column: number): PixelBuilder {
     this.column = column;
     return this;
   }
@@ -34,12 +34,12 @@ export class PixelBuilder {
     return this.color;
   }
 
-  setColor(color: CONST_PIXEL_COLOR): PixelBuilder {
+  public setColor(color: CONST_PIXEL_COLOR): PixelBuilder {
     this.color = color;
     return this;
   }
 
-  build(): Pixel {
+  public build(): Pixel {
     return new Pixel(this);
   }
 }

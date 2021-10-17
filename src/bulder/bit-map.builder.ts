@@ -12,30 +12,30 @@ export class BitMapBuilder {
     this.pixels = [];
   }
 
-  setLineSize(lineSize: number): BitMapBuilder {
+  public setLineSize(lineSize: number): BitMapBuilder {
     this.lineSize = lineSize;
     return this;
   }
 
-  get LineSize(): number {
+  public get LineSize(): number {
     return this.lineSize;
   }
 
-  setColumnSize(columnSize: number): BitMapBuilder {
+  public setColumnSize(columnSize: number): BitMapBuilder {
     this.columnSize = columnSize;
     return this;
   }
 
-  get ColumnSize(): number {
+  public get ColumnSize(): number {
     return this.columnSize;
   }
 
-  setPixels(pixels: Pixel[]): BitMapBuilder {
+  public setPixels(pixels: Pixel[]): BitMapBuilder {
     this.pixels = pixels;
     return this;
   }
 
-  get Pixels(): Pixel[] {
+  public get Pixels(): Pixel[] {
     return this.pixels;
   }
 
