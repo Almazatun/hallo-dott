@@ -23,8 +23,4 @@ export class Pixel {
   public getColor(): CONST_PIXEL_COLOR {
     return this.color;
   }
-
-  public setColor(colorInput: CONST_PIXEL_COLOR): void {
-    this.color = colorInput;
-  }
 }
