@@ -2,8 +2,8 @@ import fs from 'fs';
 import readline from 'readline';
 
 import { BitMapUseCase, CreateBitMapInput } from './domain/bit-map.use-case';
-import { BitMapBuilder } from './bulder/bit-map.builder';
-import { PixelBuilder } from './bulder/pixel.builder';
+import { BitMapBuilder } from './builder/bit-map.builder';
+import { PixelBuilder } from './builder/pixel.builder';
 
 export function processLineByLine() {
   const inputFileName: string = 'input.txt';

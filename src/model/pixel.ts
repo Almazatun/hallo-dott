@@ -1,5 +1,5 @@
 import { CONST_PIXEL_COLOR } from '../types';
-import { PixelBuilder } from '../bulder/pixel.builder';
+import { PixelBuilder } from '../builder/pixel.builder';
 
 export class Pixel {
   private i: number // line

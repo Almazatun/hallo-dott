@@ -1,5 +1,5 @@
-import { BitMapBuilder } from '../bulder/bit-map.builder';
-import { PixelBuilder } from '../bulder/pixel.builder';
+import { BitMapBuilder } from '../builder/bit-map.builder';
+import { PixelBuilder } from '../builder/pixel.builder';
 import { BitMap } from '../model/bit-map';
 import { Pixel } from '../model/pixel';
 

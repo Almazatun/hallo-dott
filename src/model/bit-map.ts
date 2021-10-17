@@ -1,6 +1,6 @@
 import { Pixel } from './pixel';
 import { CONST_PIXEL_COLOR } from '../types';
-import { BitMapBuilder } from '../bulder/bit-map.builder';
+import { BitMapBuilder } from '../builder/bit-map.builder';
 
 export class BitMap {
   private lineSize: number;
