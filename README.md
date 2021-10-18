@@ -1,7 +1,4 @@
 # Hallo-dott
-
-## Installation
-
 ###Input
 ```
 1
@@ -29,6 +26,7 @@
 1 0 0 1
 ```
 
+## Installation
 In the project directory, you can run:
 
 1. Clone project
