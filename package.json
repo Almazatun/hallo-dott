@@ -1,5 +1,5 @@
 {
-  "name": "tt-rectangular",
+  "name": "hallo-dott",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Almazatun/tt-rectnagular.git"
+    "url": "git+https://github.com/Almazatun/hallo-dott.git"
   },
   "author": "Almaz P",
   "license": "ISC",
@@ -20,22 +20,22 @@
   },
   "homepage": "https://github.com/Almazatun/tt-rectnagular#readme",
   "dependencies": {
-    "@types/node": "^16.10.5",
-    "@types/nodemon": "^1.19.1",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
-    "eslint": "^8.0.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-prettier": "^4.0.0",
-    "nodemon": "^2.0.13",
-    "ts-node-dev": "^1.1.8"
+    "@types/node": "16.10.5",
+    "@types/nodemon": "1.19.1",
+    "@typescript-eslint/eslint-plugin": "5.0.0",
+    "@typescript-eslint/parser": "5.0.0",
+    "eslint": "8.0.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-prettier": "4.0.0",
+    "nodemon": "2.0.13",
+    "ts-node-dev": "1.1.8"
   },
   "devDependencies": {
-    "@types/jest": "^27.0.2",
-    "jest": "^27.2.5",
-    "ts-jest": "^27.0.7",
-    "typescript": "^4.4.4"
+    "@types/jest": "27.0.2",
+    "jest": "27.2.5",
+    "ts-jest": "27.0.7",
+    "typescript": "4.4.4"
   }
 }
