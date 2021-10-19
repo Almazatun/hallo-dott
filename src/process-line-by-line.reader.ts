@@ -5,6 +5,7 @@ import { BitMapUseCase, CreateBitMapInput } from './domain/bit-map.use-case';
 import { BitMapBuilder } from './builder/bit-map.builder';
 import { PixelBuilder } from './builder/pixel.builder';
 import { calculateDistanceFromEachPixelToNearestWhite } from './calculate-distance';
+import { CONST_BITMAP_SIZE } from './types';
 
 export function processLineByLine() {
   const inputFileName: string = 'input.txt';
@@ -22,13 +23,21 @@ export function processLineByLine() {
     if (line.includes(' ')) {
       const [lineSize, columnSize] = line.split(' ');
 
-      const bitMap: CreateBitMapInput = {
-        lineSize: Number(lineSize),
-        columnSize: Number(columnSize),
-        pixels: '',
-      };
+      const isValidLineSize = Number(lineSize) >= CONST_BITMAP_SIZE.MIN && Number(lineSize) <= CONST_BITMAP_SIZE.MAX;
+      const isValidColumnSize = Number(columnSize) >= CONST_BITMAP_SIZE.MIN
+        && Number(columnSize) <= CONST_BITMAP_SIZE.MAX;
 
-      bitMapList = [...bitMapList, bitMap];
+      if (isValidLineSize && isValidColumnSize) {
+        const bitMap: CreateBitMapInput = {
+          lineSize: Number(lineSize),
+          columnSize: Number(columnSize),
+          pixels: '',
+        };
+
+        bitMapList = [...bitMapList, bitMap];
+      } else {
+        throw new Error('Invalid input data');
+      }
     }
     if (!line.includes(' ')) {
       const lastBitMapListElement = bitMapList[bitMapList.length - 1];
